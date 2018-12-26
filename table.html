@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>table</title>
+<style>
+.forplace
+{
+ margin: 20%;
+ 
+}
+.fortext
+{
+    color: darkseagreen;
+    size: 20px
+
+}
+.forbutton
+{
+    width: 100px;
+    height: 32px;
+}
+.fortextbox
+{
+    width: 220px;
+    height: 30px;
+}
+.forbg
+{
+    background-color: black;
+    margin-top: 25px;
+    margin-left: 400px
+}
+</style>
+</head>
+
+<body class="forbg"> 
+<div class="forplace">
+<h2 class="fortext">Make a table for number</h2>
+<input type="text" id="text" placeholder="  Enter number:" class="fortextbox">
+<br>
+<br>
+<input type="button" id="submit" class="forbutton" value="Submit" onclick="table()">
+<br/>
+<br/>
+<h2 class="fortext" id="show"></h2>
+<div id="Output" class="fortext"></div>
+
+<script>
+    function table()
+    {
+        var number=parseInt(document.getElementById("text").value);
+        var s = "";
+        for(i=1;i<=10;i++)
+        {
+            s = s + number + "*" + i + "=" + number*i + "<br/>";
+            //document.write(number ,"*", i ,"=", number*i);
+            //document.write("<br>");
+        }
+        var t="output is";
+        document.getElementById("show").innerHTML=t;
+        document.getElementById("Output").innerHTML =s;
+    
+    }
+</script>
+</div>
+</body>
+</html>
